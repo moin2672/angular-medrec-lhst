@@ -1,0 +1,19 @@
+export interface SubjectVisit{
+  _id:string,
+  sv_Height:number,
+  sv_Weight:number,
+  sv_Temp:number,
+  sv_Pulse:number,
+  sv_Oxy:number,
+  sv_bp_sys:number,
+  sv_bp_dia:number,
+  sv_bp_symptoms:string, 
+  sv_bp_prescription:string,
+  sv_isLabreqd:boolean,
+  sv_lab:string,
+  sv_isScanReqd:boolean,
+  sv_scan:string,
+  sv_isFollowUp:boolean,
+  sv_nextDate:string,
+  sv_attachment:string
+  }

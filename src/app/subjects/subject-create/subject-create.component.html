@@ -1,0 +1,35 @@
+<form (submit)="onSaveSubject()" [formGroup]="form">
+  <div class="form-group">
+    <label for="subjectAadhar">Subject Aadhar</label>
+    <input
+      type="email"
+      class="form-control"
+      id="subjectAadhar"
+      placeholder="Enter Subject Aadhar"
+      name="subjectAadhar"
+      formControlName="subjectAadhar"
+    />
+    <small
+      class="form-text text-muted"
+      *ngIf="form.get('subjectAadhar').invalid"
+      >Subject Aadhar is required</small
+    >
+  </div>
+  <div class="form-group">
+    <label for="subjectName">Subject Name</label>
+    <input
+      type="email"
+      class="form-control"
+      id="subjectName"
+      placeholder="Enter Subject Name"
+      name="subjectName"
+      formControlName="subjectName"
+    />
+    <small class="form-text text-muted" *ngIf="form.get('subjectName').invalid"
+      >Subjet Name is required.</small
+    >
+  </div>
+  <button class="btn btn-success" type="submit">
+    {{ editMode ? 'Update' : 'Add' }} Subject
+  </button>
+</form>

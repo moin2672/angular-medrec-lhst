@@ -1,0 +1,62 @@
+<br /><br />
+<div class="row">
+  <div class="col-md-3"></div>
+  <div class="col-md-6">
+    <div class="card text-white bg-primary mb-3">
+      <div class="card-body">
+        <h4 class="card-title text-center">MEDREC</h4>
+        <div class="row">
+          <div class="col-md-4"></div>
+          <div class="col-md-4">
+            <form (submit)="onSignup(signForm)" #signForm="ngForm">
+              <div class="form-group">
+                <input
+                  class="form-control"
+                  type="email"
+                  name="email"
+                  ngModel
+                  placeholder="E-mail"
+                  #emailInput="ngModel"
+                  required
+                  email
+                />
+                <small style="color:red" *ngIf="emailInput.invalid"
+                  >E-mail ID is required</small
+                >
+              </div>
+              <div class="form-group">
+                <input
+                  class="form-control"
+                  type="password"
+                  name="password"
+                  ngModel
+                  placeholder="Password"
+                  #passwordInput="ngModel"
+                  required
+                />
+                <small style="color:red" *ngIf="passwordInput.invalid"
+                  >Password is required</small
+                >
+              </div>
+              <!-- <div class="form-group">
+            <label for="confirmPassword">Password</label> 
+            <input class="form-control" type="password" name="confirmPassword" ngModel placeholder="Confirm Password" #confirmPasswordInput="ngModel" required (ngModelChange)="checkConfirm($event)" >
+            <small style="color:red" *ngIf="confirmPasswordInput.invalid">Confirm Password is required</small>
+            </div> -->
+              <!-- <br> -->
+              <button
+                class="btn btn-info"
+                type="submit"
+                style="margin-right:5px;"
+              >
+                Sign up
+              </button>
+              <button class="btn btn-danger">Cancel</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3"></div>
+    </div>
+  </div>
+</div>

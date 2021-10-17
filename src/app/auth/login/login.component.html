@@ -1,0 +1,52 @@
+<br /><br />
+<div class="row">
+  <div class="col-md-3"></div>
+  <div class="col-md-6">
+    <div class="card text-white bg-primary mb-3">
+      <div class="card-body">
+        <h4 class="card-title text-center">MEDREC</h4>
+        <form (submit)="onLogin(LoginForm)" #LoginForm="ngForm">
+          <div class="form-group">
+            <!-- <label for="email">Email address</label> -->
+            <!-- <input type="email" class="form-control"  placeholder="E-mail.." #emailInput="ngModel" required email> -->
+            <input
+              class="form-control"
+              type="email"
+              name="email"
+              ngModel
+              placeholder="E-mail"
+              #emailInput="ngModel"
+              required
+              email
+            />
+            <small style="color:red" *ngIf="emailInput.invalid"
+              >E-mail ID is required</small
+            >
+          </div>
+          <div class="form-group">
+            <!-- <label for="password">Password</label> -->
+            <!-- <input type="password" class="form-control"  placeholder="E-mail.." #passwordInput="ngModel" required password> -->
+            <input
+              class="form-control"
+              type="password"
+              name="password"
+              ngModel
+              placeholder="Password"
+              #passwordInput="ngModel"
+              required
+            />
+            <small style="color:red" *ngIf="passwordInput.invalid"
+              >Password is required</small
+            >
+          </div>
+          <!-- <br> -->
+          <button class="btn btn-info" type="submit" style="margin-right:5px;">
+            Login
+          </button>
+          <button class="btn btn-danger">Cancel</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3"></div>
+</div>
